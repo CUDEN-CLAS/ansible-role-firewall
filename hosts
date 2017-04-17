@@ -1,0 +1,39 @@
+[local]
+localhost ansible_connection=local
+
+[web]
+servertest.ucdenver.pvt ansible_ssh_host=192.168.33.55 ansible_ssh_user=root
+#clas-drup-prod02.ucdenver.pvt ansible_ssh_host=10.50.103.11 ansible_ssh_user=stalkert
+
+[all_servers]
+clas-drup-prod01.ucdenver.pvt ansible_ssh_host=10.50.103.10 ansible_ssh_user=stalkert
+#clas-drup-prod02.ucdenver.pvt ansible_ssh_host=10.50.103.11 ansible_ssh_user=stalkert
+#clas-db01.ucdenver.pvt ansible_ssh_host=10.133.32.10 ansible_ssh_user=stalkert
+#clas-db02.ucdenver.pvt ansible_ssh_host=10.133.32.11 ansible_ssh_user=stalkert
+#clas-gluster01.ucdenver.pvt ansible_ssh_host=10.50.103.40 ansible_ssh_user=stalkert
+#clas-gluster02.ucdenver.pvt ansible_ssh_host=10.50.103.41 ansible_ssh_user=stalkert
+#clas-varn-prod01.ucdenver.pvt ansible_ssh_host=10.50.103.20 ansible_ssh_user=stalkert
+#clas-cache01.ucdenver.edu ansible_ssh_host=10.50.103.30 ansible_ssh_user=stalkert
+
+[cache]
+clas-cache01.ucdenver.pvt ansible_ssh_host=10.50.103.30 ansible_ssh_user=stalkert
+
+[d8_web]
+d8.local ansible_ssh_host=192.168.33.23 ansible_ssh_user=root
+
+[inventory]
+clas-invtest.ucdenver.pvt ansible_ssh_host=10.20.103.15 ansible_ssh_user=stalkert
+
+[logging]
+logs.local ansible_ssh_host=192.168.33.22 ansible_ssh_user=root
+
+[deploy_targets]
+clas-test.ucdenver.pvt
+d8.local
+logs.local
+
+[host_list]
+clas-test.ucdenver.pvt
+clas-invtest.ucdenver.pvt
+logs.local
+d8.local
